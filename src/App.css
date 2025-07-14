@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body, html, #root {
+  font-family: 'Segoe UI', sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+section{
+    height: 100vh;
+    align-content: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #000000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.nav-logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.logo-img{
+  max-width: 3.5vw;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4;
+}
+
+/* Espaciado para que el contenido no quede oculto debajo de la navbar */
+.hero,
+.about {
+  padding-top: 60px;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem;
+  background: #000;
+  align-items: center;
+}
+
+.about img {
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+  margin-right: 2rem;
+  border-radius: 10px;
+}
+
+.about .text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.servicios {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #111;
+  color: white;
+}
+
+.servicios h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.servicios p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.servicios img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.ri {
+  background: #111;
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.ri h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.ri-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.ri .texto {
+  max-width: 400px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.ri  img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.trabajadores {
+  background: #111;
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.trabajadores h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.trabajadores-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.trabajadores .texto {
+  max-width: 400px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.trabajadores  img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* MONOTRIBUTISTAS */
+.monotributo {
+  background: white;
+  color: black;
+  padding: 4rem 2rem;
+}
+
+.monotributo h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.monotributo-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.monotributo .texto {
+  max-width: 400px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.monotributo img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+/* === Módulo: Sociedades === */
+.sociedades-section {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 80px 20px;
+}
+
+.sociedades-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .sociedades-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.sociedades-text {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.sociedades-image {
+  flex: 1;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+.contacto {
+  flex-wrap: wrap;
+  padding: 3rem;
+  background: #000;
+  align-items: center;
+  justify-items: center;
+  max-width: 100%;
+}
+
+.contacto-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contacto img {
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+  margin-right: 2rem;
+  border-radius: 10px;
+}
+
+.contacto .text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contacto p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
