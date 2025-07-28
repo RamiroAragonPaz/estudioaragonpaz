@@ -1,7 +1,7 @@
 import './App.css';
 import heroImage from './assets/fondo.png';
 import aboutImage from './assets/nosotros.png';
-import SERVICEImage from './assets/1.jpg';
+import SERVICEImage from './assets/1.png';
 import MONOImage from './assets/4.png';
 import RIImage from './assets/5.png';
 import RELDEPImage from './assets/6.png';
