@@ -2,18 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+  max-width: 100vw;
+  }
 
 
 body, html, #root {
   font-family: 'Segoe UI', sans-serif;
-  background: #111;
+  background: #000000;
   color: #fff;
+  overflow-x: hidden 
 }
 
 section{
     height: 100vh;
     align-content: center;
+    max-width: 100vw;
+    z-index: 100;
 }
 
 html {
@@ -106,7 +110,7 @@ html {
 .about {
   display: flex;
   flex-wrap: wrap;
-  padding: 3rem;
+  padding: 5rem;
   background: #000;
   align-items: center;
 }
@@ -115,7 +119,7 @@ html {
   max-width: 100%;
   width: 500px;
   height: auto;
-  margin-right: 2rem;
+  margin: 2rem;
   border-radius: 10px;
 }
 
@@ -305,7 +309,7 @@ html {
   .sociedades-container {
     flex-direction: row;
     align-items: center;
-  }
+    }
 }
 
 .sociedades-text {
