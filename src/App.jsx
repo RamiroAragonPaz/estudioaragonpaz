@@ -18,11 +18,11 @@ function App() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // duración de la animación en milisegundos
-      once: false      // si solo se anima una vez
+      duration: 10, // duración de la animación en milisegundos
+      once: false,
+      delay: 50,
     });
   }, []);
-
 
   useEffect(() => {
   const handleScroll = () => {
@@ -56,14 +56,14 @@ function App() {
         </ul>
       </nav>
       {/* Sección Hero */}
-        <section id="inicio" className="hero" style={{ backgroundImage: `url(${heroImage})` }}>
+        <section id="inicio" className="hero" style={{ backgroundImage: `url(${heroImage})`}}>
         <div className="overlay">
           <h1>ARAGÓN PAZ<br />Estudio Contable</h1>
           <p>Impuestos, Laboral, Contabilidad y Sociedades.</p>
         </div>
       </section>
       {/* Sección Sobre Nosotros */}
-      <section data-aos="fade-up" id="nosotros" className="about">
+      <section data-aos="fade" data-aos-delay="100" data-aos-once="false" id="nosotros" className="about">
        <img  src={SERVICEImage} alt="Sobre Nosotros" />
         <div className="text">
           <h2>Sobre Nosotros</h2>
@@ -77,7 +77,7 @@ function App() {
           </p>
         </div>
       </section>
-      <section data-aos="zoom-out" id="servicios" className="servicios">
+      <section data-aos="fade" id="servicios" className="servicios">
         <h2>Nuestros servicios</h2>
           <p>
             Buscamos brindarte soluciones para la correcta gestión de tu contabilidad personal, 
@@ -86,7 +86,7 @@ function App() {
           <img src={aboutImage} alt="Servicios" />
         </section>
         {/* Sección Trabajadores en RI */}
-        <section data-aos="fade-left" id="ri" className="ri">
+        <section data-aos="fade" id="ri" className="ri">
           <h2>01 Responsables inscriptos</h2>
           <div className="ri-content">
             <img src={RIImage} alt="RI" />
@@ -101,7 +101,7 @@ function App() {
           </div>
         </section>
         {/* Sección Monotributistas */}
-        <section data-aos="fade-right" id="monotributo" className="monotributo">
+        <section data-aos="fade" id="monotributo" className="monotributo">
           <h2>02 Monotributistas</h2>
             <div className="monotributo-content">
               <div className="texto">
@@ -118,7 +118,7 @@ function App() {
           </div>
         </section>
          {/* Sección Trabajadores en relación de dependencia */}
-        <section data-aos="fade-left" id="trabajadores" className="trabajadores">
+        <section data-aos="fade" id="trabajadores" className="trabajadores">
           <h2>03 Trabajadores en relación de dependencia</h2>
           <div className="trabajadores-content">
             <img src={RELDEPImage} alt="Trabajadores en relación de dependencia" />
@@ -132,7 +132,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section data-aos="fade-right" id="sociedades" className="monotributo">
+        <section data-aos="fade" id="sociedades" className="monotributo">
           <h2 className="text-4xl font-bold mb-8 text-center">04 Sociedades</h2>
           <div className="monotributo-content">
             <div className='texto'>
@@ -148,7 +148,7 @@ function App() {
             </div>
           </div>
       </section>
-      <section data-aos="zoom-out" id="contacto" className="contacto">
+      <section data-aos="fade" id="contacto" className="contacto">
         <div className='contacto-container'>
           <img src={ContactImage} alt="Contacto" />
           <div className="text">

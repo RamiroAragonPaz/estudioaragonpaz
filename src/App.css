@@ -10,7 +10,7 @@ body, html, #root {
   font-family: 'Segoe UI', sans-serif;
   background: #000000;
   color: #fff;
-  overflow-x: hidden 
+  overflow-x: hidden;
 }
 
 section{
@@ -75,7 +75,7 @@ html {
 /* Espaciado para que el contenido no quede oculto debajo de la navbar */
 .hero,
 .about {
-  padding-top: 60px;
+  padding-top: 00px;
 }
 
 .hero {
@@ -84,6 +84,7 @@ html {
   background-size: cover;
   background-position: center;
   position: relative;
+  overflow-y: hidden;
 }
 
 .hero .overlay {
