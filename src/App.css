@@ -71,7 +71,7 @@ html {
 }
 
 .nav-links li a:hover {
-  color: #00bcd4;
+  color: #7c7c7c;
 }
 
 /* Botón hamburguesa oculto por defecto */
@@ -120,13 +120,6 @@ html {
     max-width: fit-content;
   }
 
-  section{
-    padding: 0;
-  }
-
-  .about{
-    padding: 0;
-  }
 
 }
 
@@ -196,6 +189,23 @@ html {
   font-size: 1rem;
   line-height: 1.6;
   color: #ddd;
+}
+
+@media (max-width: 768px){
+  .about{
+    padding: 4rem 2rem;
+    justify-content: center;
+  }
+
+  .about img{
+    margin: 0;
+  }
+
+  .text {
+    max-width: 80%;
+    text-align: center;
+  }
+
 }
 
 .servicios {
@@ -364,7 +374,7 @@ html {
   gap: 40px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .sociedades-container {
     flex-direction: row;
     align-items: center;
@@ -421,4 +431,37 @@ html {
   font-size: 1rem;
   line-height: 1.6;
   color: #ddd;
+}
+
+.contacto-container  a:any-link {
+   color: #7c7c7c;
+}
+
+.contacto-container a:hover{
+   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .contacto-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  section {
+    height: auto;
+  }
+
+  .overlay {
+    padding: 2rem;
+  }
+
+  .about {
+    padding: 4rem 2rem;
+  }
+
+  .about h2{
+    margin: 3rem 0;
+  }
+
 }

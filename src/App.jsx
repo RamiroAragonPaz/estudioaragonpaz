@@ -52,13 +52,13 @@ function App() {
       <nav className="navbar">
         <button className="nav-toggle" onClick={handleToggleMenu}>☰</button>
         <div className="nav-logo">
-          <a href="#inicio"><img className='logo-img' src={logo} alt="Estudio Aragón Paz" /></a>
+          <a href="#inicio" ><img className='logo-img' src={logo} alt="Estudio Aragón Paz" /></a>
         </div>
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Sobre Nosotros</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li onClick={handleToggleMenu}><a href="#inicio">Inicio</a></li>
+          <li onClick={handleToggleMenu} ><a href="#nosotros">Sobre Nosotros</a></li>
+          <li onClick={handleToggleMenu} ><a href="#servicios">Servicios</a></li>
+          <li onClick={handleToggleMenu} ><a href="#contacto">Contacto</a></li>
           {/*<li><a href="#monotributo">Monotributistas</a></li>*/}
         </ul>
       </nav>
@@ -160,7 +160,7 @@ function App() {
           <img src={ContactImage} alt="Contacto" />
           <div className="text">
             <h2>Trabajemos juntos.</h2>
-            <div>
+              <div>
               <h3 className="font-semibold">Instagram</h3>
                 <a
                   href="https://www.instagram.com/estudiocontablearagonpaz"
