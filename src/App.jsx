@@ -99,7 +99,7 @@ function App() {
             <img src={RIImage} alt="RI" />
             <div className="texto">
               <p>
-                Alta y baja en AFIP, IVA, ganancias, autónomos, bienes personales.<br />
+                Alta y baja en ARCA, IVA, ganancias, autónomos, bienes personales.<br />
                 Inscripción y baja en Ingresos Brutos. Declaraciones juradas impositivas.<br />
                 Inscripción a moratorias, regularización de deudas y planes de pago.<br />
                 Asesoramiento contable y mucho más.
@@ -113,7 +113,7 @@ function App() {
             <div className="monotributo-content">
               <div className="texto">
                 <p>
-                  Alta y baja en AFIP, inscripción en Monotributo. Monotributo Simplificado.<br />
+                  Alta y baja en ARCA, inscripción en Monotributo. Monotributo Simplificado.<br />
                   Inscripción y baja en Ingresos Brutos (local o convenio multilateral).<br />
                   Presentación de declaraciones juradas mensuales.<br />
                   Asesoramiento respecto a la facturación.<br />
@@ -145,7 +145,7 @@ function App() {
             <div className='texto'>
               <p>
                 Constitución de sociedades (SAS, SRL, SA). Elaboración de estatutos y tramitación ante IGJ o DPPJ. Alta de CUIT,
-                inscripción en AFIP y Rentas. Confección de libros contables obligatorios y societarios. 
+                inscripción en ARCA y otras agencias de recaudación. Confección de libros contables obligatorios y societarios. 
                 Liquidación mensual de impuestos y sueldos. Presentación de balances ante organismos de control. 
                 Asesoramiento permanente en materia tributaria, laboral y societaria. Asistencia contable integral.
               </p>
