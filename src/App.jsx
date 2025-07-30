@@ -8,17 +8,23 @@ import RELDEPImage from './assets/6.png';
 import SAImage from './assets/7.png';
 import ContactImage from './assets/8.png'
 import logo from './assets/LOGO1.png';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+      setMenuOpen(!menuOpen);
+  };
+
 
   useEffect(() => {
     AOS.init({
-      duration: 10, // duración de la animación en milisegundos
+      duration: 1000, // duración de la animación en milisegundos
       once: false,
       delay: 50,
     });
@@ -44,10 +50,11 @@ function App() {
     <div className="App">
       {/* Barra de navegación */}
       <nav className="navbar">
+        <button className="nav-toggle" onClick={handleToggleMenu}>☰</button>
         <div className="nav-logo">
           <a href="#inicio"><img className='logo-img' src={logo} alt="Estudio Aragón Paz" /></a>
         </div>
-        <ul className="nav-links">
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#nosotros">Sobre Nosotros</a></li>
           <li><a href="#servicios">Servicios</a></li>
@@ -63,7 +70,7 @@ function App() {
         </div>
       </section>
       {/* Sección Sobre Nosotros */}
-      <section data-aos="fade" data-aos-delay="100" data-aos-once="false" id="nosotros" className="about">
+      <section data-aos="fade" data-aos-once="false" id="nosotros" className="about">
        <img  src={SERVICEImage} alt="Sobre Nosotros" />
         <div className="text">
           <h2>Sobre Nosotros</h2>
