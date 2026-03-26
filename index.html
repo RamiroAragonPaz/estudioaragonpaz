@@ -76,6 +76,34 @@
         .perfil-img { flex: 1; min-width: 300px; text-align: center; }
         .perfil-img img { width: 100%; max-width: 400px; border-radius: 10px; border: 1px solid var(--dorado); padding: 10px; }
 
+        /* BOTÓN WHATSAPP FLOTANTE */
+        .whatsapp-float {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: #25D366;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 999;
+          text-decoration: none;
+          transition: transform 0.2s;
+        }
+        
+        .whatsapp-float:hover {
+          transform: scale(1.1);
+        }
+        
+        .whatsapp-float img {
+          width: 30px;
+          height: 30px;
+        }
+
+
         /* FOOTER */
         footer { padding: 80px 0; text-align: center; background: #0a0a0a; border-top: 1px solid var(--gris-medio); }
 
