@@ -1,4 +1,4 @@
-<!doctype html>
+/*<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,4 +10,242 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
+</html>*/
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aragón Paz | Estudio Contable Digital 2026</title>
+    <style>
+        :root {
+            --negro: #1a1a1a;
+            --dorado: #d4a574;
+            --blanco: #ffffff;
+            --gris: #2a2a2a;
+            --texto-gris: #a1a1a1;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--negro);
+            color: var(--blanco);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80'); /* Imagen de laptop tech sutil */
+            background-size: cover;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--dorado);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-inline: auto;
+        }
+
+        .btn-principal {
+            background-color: var(--dorado);
+            color: var(--negro);
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-principal:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 165, 116, 0.2);
+        }
+
+        /* Trust Bar (Plataformas) */
+        .trust-bar {
+            background-color: #111;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--gris);
+        }
+
+        .trust-bar p { color: var(--texto-gris); font-size: 0.9rem; margin-bottom: 20px; }
+        .logos-flex {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            opacity: 0.6;
+            filter: grayscale(1);
+        }
+
+        /* Servicios Card System */
+        .servicios {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .titulo-seccion h2 { font-size: 2.5rem; }
+        .titulo-seccion .linea { 
+            width: 60px; height: 3px; background: var(--dorado); margin: 20px auto;
+        }
+
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--gris);
+            padding: 40px;
+            border-radius: 8px;
+            border-bottom: 4px solid transparent;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-bottom: 4px solid var(--dorado);
+            transform: translateY(-10px);
+        }
+
+        .card h3 { color: var(--dorado); margin-top: 0; }
+        .card ul { padding: 0; list-style: none; }
+        .card ul li { margin-bottom: 12px; display: flex; align-items: flex-start; }
+        .card ul li::before { content: "→"; color: var(--dorado); margin-right: 10px; }
+
+        /* FAQ / Dolor */
+        .faq {
+            background-color: #111;
+            padding: 80px 20px;
+        }
+
+        .faq-item {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            border-left: 3px solid var(--dorado);
+            padding-left: 20px;
+        }
+
+        .faq-item h4 { color: var(--dorado); margin-bottom: 10px; }
+
+        /* Footer / Autoridad */
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 1px solid var(--gris);
+        }
+
+        .autoridad {
+            color: var(--texto-gris);
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ARAGÓN PAZ</h1>
+            <p>Especialistas en Exportación de Servicios, ARCA 2026 y Convenio Multilateral.</p>
+            <a href="https://wa.me/5492213998871" class="btn-principal">INICIAR CONSULTA POR WHATSAPP</a>
+        </div>
+    </section>
+
+    <div class="trust-bar">
+        <p>Expertos en regularizar ingresos desde plataformas globales</p>
+        <div class="logos-flex">
+            <span>WISE</span> | <span>PAYONEER</span> | <span>DEEL</span> | <span>UTTOPIA</span> | <span>GRABRFI</span>
+        </div>
+    </div>
+
+    <section class="servicios">
+        <div class="titulo-seccion">
+            <h2>Soluciones Impositivas</h2>
+            <div class="linea"></div>
+        </div>
+        <div class="grid-servicios">
+            <div class="card">
+                <h3>Freelancers & Exportadores</h3>
+                <ul>
+                    <li>Facturación E y cobros en USD legalmente.</li>
+                    <li>Encuadre óptimo en ARCA 2026.</li>
+                    <li>Gestión de Monotributo y exclusiones.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>PyMEs & Sociedades</h3>
+                <ul>
+                    <li>Liquidación de Impuestos y Sueldos.</li>
+                    <li>Constitución de SAS / SRL.</li>
+                    <li>Balances y Auditoría Integral.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Gestión Multi-Provincial</h3>
+                <ul>
+                    <li>Alta en Convenio Multilateral.</li>
+                    <li>Eliminación de retenciones bancarias (SIRCREB).</li>
+                    <li>Optimización de Ingresos Brutos (ARBA y otros).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="titulo-seccion">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="linea"></div>
+        </div>
+        <div class="faq-item">
+            <h4>¿Cómo cobro mis dólares sin pesificar a oficial?</h4>
+            <p>Usamos el marco legal vigente de ARCA para exportadores de servicios, optimizando el cupo de dólares anuales según la normativa 2026.</p>
+        </div>
+        <div class="faq-item">
+            <h4>¿Por qué me retienen plata en todos los bancos?</h4>
+            <p>Probablemente por un mal encuadre en Ingresos Brutos. Te inscribimos en Convenio Multilateral para frenar las retenciones indebidas.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="autoridad">
+            Dr. Ramiro G. Aragón Paz | CPCEPBA T°169 F° 39<br>
+            Especialista en Tributación (UNLP)
+        </div>
+        <p>© 2026 Aragón Paz - Estudio Contable Digital</p>
+        <div style="margin-top: 20px;">
+            <a href="https://wa.me/5492213998871" style="color:var(--dorado); text-decoration:none;">WhatsApp: (221) 399 8871</a> | 
+            <a href="mailto:estudiocontablearagonpaz@gmail.com" style="color:var(--dorado); text-decoration:none; margin-left:15px;">Email Directo</a>
+        </div>
+    </footer>
+
+</body>
 </html>
