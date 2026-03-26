@@ -9,227 +9,176 @@
             --negro: #1a1a1a;
             --dorado: #d4a574;
             --blanco: #ffffff;
-            --gris: #2a2a2a;
+            --gris-oscuro: #111111;
+            --gris-medio: #2a2a2a;
             --texto-gris: #a1a1a1;
         }
 
-        body {
-            margin: 0;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--negro);
-            color: var(--blanco);
-            line-height: 1.6;
+        body { margin: 0; font-family: 'Inter', Arial, sans-serif; background-color: var(--negro); color: var(--blanco); line-height: 1.7; scroll-behavior: smooth; }
+        
+        /* Utilidades */
+        .container { max-width: 1100px; margin: auto; padding: 0 20px; }
+        .text-dorado { color: var(--dorado); }
+        .btn { 
+            background-color: var(--dorado); color: var(--negro); padding: 16px 32px; 
+            text-decoration: none; font-weight: bold; border-radius: 4px; display: inline-block;
+            transition: 0.3s; border: none; cursor: pointer;
         }
+        .btn:hover { transform: scale(1.03); box-shadow: 0 0 20px rgba(212, 165, 116, 0.4); }
 
-        /* Hero Section */
+        /* 1. HERO */
         .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80'); /* Imagen de laptop tech sutil */
-            background-size: cover;
-            padding: 0 20px;
+            height: 90vh; display: flex; align-items: center; text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2000');
+            background-size: cover; background-position: center;
         }
 
-        .hero-content h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+        /* 2. TRUST BAR */
+        .trust { background: var(--gris-oscuro); padding: 30px 0; border-bottom: 1px solid var(--gris-medio); text-align: center; }
+        .logos { display: flex; justify-content: center; gap: 30px; opacity: 0.5; flex-wrap: wrap; margin-top: 15px; font-weight: bold; letter-spacing: 2px; }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            color: var(--dorado);
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-inline: auto;
-        }
+        /* 3. PROBLEMAS (Puntos de Dolor) */
+        .dolores { padding: 100px 0; background: var(--negro); }
+        .grid-dolores { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 50px; }
+        .dolor-item { border-left: 2px solid var(--dorado); padding-left: 20px; }
 
-        .btn-principal {
-            background-color: var(--dorado);
-            color: var(--negro);
-            padding: 18px 40px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: 0.3s;
-            display: inline-block;
-        }
+        /* 4. SERVICIOS (Cards) */
+        .servicios { padding: 100px 0; background: var(--gris-oscuro); }
+        .grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--gris-medio); padding: 40px; border-radius: 8px; position: relative; }
+        .card h3 { margin-top: 0; border-bottom: 1px solid var(--dorado); padding-bottom: 10px; }
 
-        .btn-principal:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(212, 165, 116, 0.2);
-        }
+        /* 5. METODOLOGÍA (Pasos) */
+        .pasos { padding: 100px 0; text-align: center; }
+        .flex-pasos { display: flex; justify-content: space-between; gap: 20px; margin-top: 50px; flex-wrap: wrap; }
+        .paso { flex: 1; min-width: 200px; }
+        .paso-num { font-size: 3rem; font-weight: 900; color: rgba(212, 165, 116, 0.2); }
 
-        /* Trust Bar (Plataformas) */
-        .trust-bar {
-            background-color: #111;
-            padding: 40px 0;
-            text-align: center;
-            border-bottom: 1px solid var(--gris);
-        }
+        /* 6. DIFERENCIAL (Por qué nosotros) */
+        .diferencial { padding: 100px 0; background: var(--dorado); color: var(--negro); }
+        .diferencial h2 { margin-top: 0; }
 
-        .trust-bar p { color: var(--texto-gris); font-size: 0.9rem; margin-bottom: 20px; }
-        .logos-flex {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            opacity: 0.6;
-            filter: grayscale(1);
-        }
+        /* 7. CONTACTO FINAL */
+        footer { padding: 100px 0; text-align: center; background: var(--negro); }
 
-        /* Servicios Card System */
-        .servicios {
-            padding: 100px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .titulo-seccion {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .titulo-seccion h2 { font-size: 2.5rem; }
-        .titulo-seccion .linea { 
-            width: 60px; height: 3px; background: var(--dorado); margin: 20px auto;
-        }
-
-        .grid-servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: var(--gris);
-            padding: 40px;
-            border-radius: 8px;
-            border-bottom: 4px solid transparent;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            border-bottom: 4px solid var(--dorado);
-            transform: translateY(-10px);
-        }
-
-        .card h3 { color: var(--dorado); margin-top: 0; }
-        .card ul { padding: 0; list-style: none; }
-        .card ul li { margin-bottom: 12px; display: flex; align-items: flex-start; }
-        .card ul li::before { content: "→"; color: var(--dorado); margin-right: 10px; }
-
-        /* FAQ / Dolor */
-        .faq {
-            background-color: #111;
-            padding: 80px 20px;
-        }
-
-        .faq-item {
-            max-width: 800px;
-            margin: 0 auto 30px;
-            border-left: 3px solid var(--dorado);
-            padding-left: 20px;
-        }
-
-        .faq-item h4 { color: var(--dorado); margin-bottom: 10px; }
-
-        /* Footer / Autoridad */
-        footer {
-            padding: 60px 20px;
-            text-align: center;
-            border-top: 1px solid var(--gris);
-        }
-
-        .autoridad {
-            color: var(--texto-gris);
-            font-size: 0.9rem;
-            margin-bottom: 30px;
-        }
-
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2rem; }
-        }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } .flex-pasos { flex-direction: column; } }
     </style>
 </head>
 <body>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>ARAGÓN PAZ</h1>
-            <p>Especialistas en Exportación de Servicios, ARCA 2026 y Convenio Multilateral.</p>
-            <a href="https://wa.me/5492213998871" class="btn-principal">INICIAR CONSULTA POR WHATSAPP</a>
+        <div class="container">
+            <h1 style="font-size: 3.5rem; margin-bottom: 10px;">ARAGÓN PAZ</h1>
+            <p style="font-size: 1.5rem; margin-bottom: 30px;">Expertos en <span class="text-dorado">ARCA 2026</span> y Exportación de Servicios.</p>
+            <a href="https://wa.me/5492213998871" class="btn">ASESORARME POR WHATSAPP</a>
         </div>
     </section>
 
-    <div class="trust-bar">
-        <p>Expertos en regularizar ingresos desde plataformas globales</p>
-        <div class="logos-flex">
-            <span>WISE</span> | <span>PAYONEER</span> | <span>DEEL</span> | <span>UTTOPIA</span> | <span>GRABRFI</span>
-        </div>
-    </div>
-
-    <section class="servicios">
-        <div class="titulo-seccion">
-            <h2>Soluciones Impositivas</h2>
-            <div class="linea"></div>
-        </div>
-        <div class="grid-servicios">
-            <div class="card">
-                <h3>Freelancers & Exportadores</h3>
-                <ul>
-                    <li>Facturación E y cobros en USD legalmente.</li>
-                    <li>Encuadre óptimo en ARCA 2026.</li>
-                    <li>Gestión de Monotributo y exclusiones.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>PyMEs & Sociedades</h3>
-                <ul>
-                    <li>Liquidación de Impuestos y Sueldos.</li>
-                    <li>Constitución de SAS / SRL.</li>
-                    <li>Balances y Auditoría Integral.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Gestión Multi-Provincial</h3>
-                <ul>
-                    <li>Alta en Convenio Multilateral.</li>
-                    <li>Eliminación de retenciones bancarias (SIRCREB).</li>
-                    <li>Optimización de Ingresos Brutos (ARBA y otros).</li>
-                </ul>
+    <section class="trust">
+        <div class="container">
+            <p style="color: var(--texto-gris); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">Especialistas en plataformas digitales</p>
+            <div class="logos">
+                <span>WISE</span> <span>PAYONEER</span> <span>DEEL</span> <span>UTTOPIA</span> <span>BINANCE</span>
             </div>
         </div>
     </section>
 
-    <section class="faq">
-        <div class="titulo-seccion">
-            <h2>Preguntas Frecuentes</h2>
-            <div class="linea"></div>
+    <section class="dolores">
+        <div class="container">
+            <h2 style="font-size: 2.5rem;">¿Te sentís identificado con esto?</h2>
+            <div class="grid-dolores">
+                <div class="dolor-item">
+                    <h4>Miedo a ARCA</h4>
+                    <p>Recibís cobros del exterior y no sabés cómo facturarlos sin que te pesifiquen todo al oficial.</p>
+                </div>
+                <div class="dolor-item">
+                    <h4>Retenciones de ARBA</h4>
+                    <p>Ves cómo desaparece tu saldo en el banco por retenciones de Ingresos Brutos (SIRCREB) que no te corresponden.</p>
+                </div>
+                <div class="dolor-item">
+                    <h4>Falta de Respuesta</h4>
+                    <p>Tu contador actual no entiende de cripto, Wise o Factura E, y tarda días en contestarte un mensaje.</p>
+                </div>
+            </div>
         </div>
-        <div class="faq-item">
-            <h4>¿Cómo cobro mis dólares sin pesificar a oficial?</h4>
-            <p>Usamos el marco legal vigente de ARCA para exportadores de servicios, optimizando el cupo de dólares anuales según la normativa 2026.</p>
+    </section>
+
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Nuestros Servicios Especializados</h2>
+            <div class="grid-servicios">
+                <div class="card">
+                    <h3>Freelancers & Exportadores</h3>
+                    <p>Optimizamos tu cupo de USD anuales según la normativa 2026. Inscripción en ARCA y Facturación E automática.</p>
+                    <a href="https://wa.me/5492213998871" style="color: var(--dorado); font-size: 0.9rem;">Consultar Plan Freelancer →</a>
+                </div>
+                <div class="card">
+                    <h3>Convenio Multilateral</h3>
+                    <p>Eliminamos las retenciones bancarias mediante el encuadre correcto en ARBA y otras jurisdicciones provinciales.</p>
+                    <a href="https://wa.me/5492213998871" style="color: var(--dorado); font-size: 0.9rem;">Recuperar mi saldo →</a>
+                </div>
+                <div class="card">
+                    <h3>Sociedades & PyMEs</h3>
+                    <p>Constitución de SAS/SRL, liquidación de sueldos y auditoría contable con enfoque en negocios digitales.</p>
+                    <a href="https://wa.me/5492213998871" style="color: var(--dorado); font-size: 0.9rem;">Ver soluciones PyME →</a>
+                </div>
+            </div>
         </div>
-        <div class="faq-item">
-            <h4>¿Por qué me retienen plata en todos los bancos?</h4>
-            <p>Probablemente por un mal encuadre en Ingresos Brutos. Te inscribimos en Convenio Multilateral para frenar las retenciones indebidas.</p>
+    </section>
+
+    <section class="pasos">
+        <div class="container">
+            <h2>Tu tranquilidad en 3 pasos</h2>
+            <div class="flex-pasos">
+                <div class="paso">
+                    <div class="paso-num">01</div>
+                    <h4>Diagnóstico Inicial</h4>
+                    <p>Analizamos tu situación fiscal actual y tus objetivos de cobro sin costo inicial por WhatsApp.</p>
+                </div>
+                <div class="paso">
+                    <div class="paso-num">02</div>
+                    <h4>Plan de Encuadre</h4>
+                    <p>Te proponemos el mejor esquema (Monotributo, Factura E o Sociedades) para pagar lo justo.</p>
+                </div>
+                <div class="paso">
+                    <div class="paso-num">03</div>
+                    <h4>Gestión Mensual</h4>
+                    <p>Nosotros nos ocupamos de los vencimientos. Vos te enfocás en hacer crecer tu negocio.</p>
+                </div>
+            </div>
+            <br><br>
+            <a href="https://wa.me/5492213998871" class="btn">INICIAR PASO 1</a>
+        </div>
+    </section>
+
+    <section class="diferencial">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2>¿Por qué elegir un Estudio Digital?</h2>
+                    <p>Entendemos la economía del conocimiento. Mientras otros estudios siguen en el papel, nosotros operamos con la velocidad que tu negocio requiere.</p>
+                    <p><strong>✓ Respuesta en menos de 4hs hábiles.</strong></p>
+                    <p><strong>✓ Expertos en normativa ARCA 2026.</strong></p>
+                    <p><strong>✓ Honorarios claros y transparentes.</strong></p>
+                </div>
+                <div style="flex: 1; min-width: 300px; background: var(--negro); padding: 30px; border-radius: 8px; color: white;">
+                    <h4 class="text-dorado">Dr. Ramiro G. Aragón Paz</h4>
+                    <p style="font-size: 0.9rem;">Contador Público (UNLP) | Esp. en Tributación.<br>Matrícula: CPCEPBA T°169 F° 39</p>
+                    <hr style="border: 0; border-top: 1px solid #333;">
+                    <p style="font-style: italic; font-size: 0.8rem;">"Nuestra misión es que el sistema impositivo sea un aliado de tu crecimiento, no una traba."</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
-        <div class="autoridad">
-            Dr. Ramiro G. Aragón Paz | CPCEPBA T°169 F° 39<br>
-            Especialista en Tributación (UNLP)
-        </div>
-        <p>© 2026 Aragón Paz - Estudio Contable Digital</p>
-        <div style="margin-top: 20px;">
-            <a href="https://wa.me/5492213998871" style="color:var(--dorado); text-decoration:none;">WhatsApp: (221) 399 8871</a> | 
-            <a href="mailto:estudiocontablearagonpaz@gmail.com" style="color:var(--dorado); text-decoration:none; margin-left:15px;">Email Directo</a>
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">¿Hablamos?</h2>
+            <p style="color: var(--texto-gris); margin-bottom: 40px;">No dejes para mañana la seguridad de tus ingresos de hoy.</p>
+            <a href="https://wa.me/5492213998871" class="btn">ENVIAR WHATSAPP DIRECTO</a>
+            <div style="margin-top: 60px; font-size: 0.8rem; color: #444;">
+                <p>Estudio Aragón Paz © 2026 - Todos los derechos reservados.<br>La Plata, Buenos Aires, Argentina.</p>
+            </div>
         </div>
     </footer>
 
